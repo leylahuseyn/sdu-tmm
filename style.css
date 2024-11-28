@@ -1,0 +1,298 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo img {
+    width: 100px;
+    padding: 0px 50px;
+}
+
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    padding-right: 20px;
+    position: relative;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #003366;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu-item a:hover {
+    color: #005bb5;
+    border-radius: 4px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: #005bb5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown li {
+    padding: 5px 20px;
+}
+
+.dropdown li a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-item:hover .dropdown {
+    display: block;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: white;
+    background-color: #0073e6;
+    /* Bright blue */
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.language-switcher a:hover {
+    background-color: #005bb5;
+}
+
+/* Dropdown-un göstərilməsi */
+.menu-item:hover>.dropdown {
+    display: block;
+    /* Yalnız birinci səviyyə dropdown göstərilir */
+}
+
+/* Dropdown içində dropdown */
+.dropdown .menu-item:hover>.dropdown-2 {
+    display: block;
+    /* Yalnız ikinci səviyyə dropdown göstərilir */
+}
+
+.dropdown-2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* Yan tərəfə açılır */
+    background-color: white;
+    color: #005bb5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-2 li {
+    padding: 5px 20px;
+}
+
+.dropdown-2 li a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.dropdown-2 li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 50px;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 5px 15px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #005bb5;
+}
+
+.search-bar button i {
+    margin-right: 5px;
+}
+
+#search-results {
+    /* margin: 20px; */
+    font-size: 16px;
+    color: #333;
+}
+
+.section-1 {
+    background-image: url('https://www.sdu.edu.az/userfiles/image/news/sdu1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    h1 {
+        color: white;
+        width: 80%;
+        opacity: 0.7;
+        z-index: 2;
+        margin: auto;
+        display: flex;
+        position: relative;
+        height: 70vh;
+        font-size: 50px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.section-1::before {
+    content: '';
+    position: absolute;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+
+.sect-2 {
+    width: 100%;
+    display: flex;
+    height: 90vh;
+    position: absolute;
+    background-color: rgba(231, 237, 255, 0.822);
+    /* background-image: url('https://media.istockphoto.com/id/945663596/tr/foto%C4%9Fraf/mavi-ka%C4%9F%C4%B1t-doku.jpg?s=612x612&w=0&k=20&c=QpVrbixlEhNvogZj1-6jQ7tUkNo1FH6cPtw1Rn-BwYE='); */
+}
+
+.s2-text {
+    width: 50%;
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    text-align: center;
+    z-index: 25;
+    position: relative;
+    /* opacity: 1; */
+    justify-content: center;
+    h1{
+        width: 85%;
+    }
+}
+
+.s2-img{
+    width: 50%;
+    margin: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+    background-image: url('https://www.sdu.edu.az/userfiles/image/news/sdu1.jpg');
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden; /* Video yığılmasını təmin etmək üçün */
+}
+
+/* Video stilini təyin edirik */
+video {
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /* Videonun kəsilmədən tam ekranı doldurmasını təmin edir */
+}
+
+/* Banner text */
+.banner-name {
+    width: 70%;
+    height: 70px;
+    opacity: 0.2;
+    background-color: #003366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute; /* Video üzərində yerleşmesini təmin edir */
+    top: 50%; /* Ekranın yuxarıdan 50%-inə yerləşdiririk */
+    left: 50%; /* Ekranın soldan 50%-inə yerləşdiririk */
+    transform: translate(-50%, -50%); /* Mətni tam ortalamak üçün */
+    font-size: 2rem;
+    color: white; /* Ağ rəngdə göstərəcəyik */
+    /* opacity: 0; */
+    animation: fadeInUp 2s ease forwards;
+}
+
+/* Fade-in animation */
+/* @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(50px);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translate(-50%, -250%) translateX(0);
+    }
+}
+ */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(-500px); /* Sol tərəfdən başlasın */
+    }
+    100% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) translateX(20%); /* Sağda dayansın */
+    }
+}
+
